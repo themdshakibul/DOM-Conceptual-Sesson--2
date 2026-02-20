@@ -24,7 +24,6 @@ function calculateCount() {
 calculateCount();
 
 function toggleStyle(id) {
-
   // remove color and text-color
   allFilterBtn.classList.remove("bg-black", "text-white");
   thrivingFilterBtn.classList.remove("bg-black", "text-white");
@@ -41,3 +40,33 @@ function toggleStyle(id) {
   selected.classList.remove("btn");
   selected.classList.add("bg-black", "text-white");
 }
+
+mainContainer.addEventListener("click", function (event) {
+  // console.log(event.target.parentNode.parentNode);
+  const parentNode = event.target.parentNode.parentNode;
+  const plantName = parentNode.querySelector(".plantName").innerText;
+  // const latinName = parentNode.querySelector(".latinName").innerText;
+
+  const light = parentNode.querySelector(".light").innerText;
+  const water = parentNode.querySelector(".water").innerText;
+  const statu = parentNode.querySelector(".statu").innerText;
+  const notes = parentNode.querySelector(".notes").innerText;
+
+  const cardInfo = {
+    plantName,
+    light,
+    water,
+    statu,
+    notes,
+  };
+  console.log(cardInfo);
+
+  const plantExist = thrivingList.find(
+    (item) => item.plantName == cardInfo.plantName,
+  );
+
+  if (!plantExist) {
+    thrivingList.push(cardInfo);
+  }
+  console.log(thrivingList);
+});
