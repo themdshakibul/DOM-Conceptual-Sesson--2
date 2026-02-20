@@ -24,5 +24,20 @@ function calculateCount() {
 calculateCount();
 
 function toggleStyle(id) {
-  console.log("Click", id);
+
+  // remove color and text-color
+  allFilterBtn.classList.remove("bg-black", "text-white");
+  thrivingFilterBtn.classList.remove("bg-black", "text-white");
+  sturgglingFilterBtn.classList.remove("bg-black", "text-white");
+
+  // add btn and text
+  allFilterBtn.classList.add("btn", "text-2xl");
+  thrivingFilterBtn.classList.add("btn", "text-2xl");
+  sturgglingFilterBtn.classList.add("btn", "text-2xl");
+
+  const selected = document.getElementById(id);
+  console.log(selected);
+
+  selected.classList.remove("btn");
+  selected.classList.add("bg-black", "text-white");
 }
