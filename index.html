@@ -18,8 +18,12 @@
   <body>
     <header class="container mx-auto px-3">
       <nav class="space-y-5 pt-7">
-        <h2 class="text-6xl font-bold text-green-700">Plan tracker</h2>
-        <div class="grid grid-cols-3 text-3xl font-semibold text-center gap-5">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-green-700">
+          Plan tracker
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 text-3xl font-semibold text-center gap-5"
+        >
           <div
             class="flex items-center justify-between bg-amber-200 p-5 rounded-md"
           >
@@ -48,7 +52,7 @@
       <!-- all btn -->
       <section>
         <header>
-          <div class="flex gap-5 pb-5">
+          <div class="flex flex-col md:flex-row gap-5 pb-5">
             <button
               onclick="toggleStyle('all-filter-btn')"
               id="all-filter-btn"
@@ -74,16 +78,15 @@
         </header>
       </section>
 
-
       <!-- Filterad card  -->
-       <section id="filterad-Section" class="hidden">
-
-       </section>
+      <section id="filterad-Section" class="hidden"></section>
 
       <!-- all card -->
       <section id="allCards" class="">
         <!-- card 1 -->
-        <div class="flex justify-between p-8 border rounded-md mb-8">
+        <div
+          class="flex flex-col md:flex-row gap-10 justify-between p-8 border rounded-md mb-8 bg-base-300"
+        >
           <!-- main par 1 -->
           <div class="card">
             <div class="space-y-5">
@@ -118,12 +121,51 @@
         </div>
 
         <!-- card 2 -->
-        <div class="flex justify-between p-8 border rounded-md mb-8">
+        <div
+          class="flex flex-col md:flex-row gap-10 justify-between p-8 border rounded-md mb-8 bg-base-300"
+        >
           <!-- main par 1 -->
           <div class="card">
             <div class="space-y-5">
               <div>
                 <h2 class="plantName text-4xl font-semibold">Plant name 2</h2>
+                <h2 class="latinName text-xl font-medium">Latin name</h2>
+              </div>
+              <div class="flex gap-5">
+                <p class="light btn btn-soft">Bright Indicat</p>
+                <p class="water btn btn-soft">Weekly</p>
+              </div>
+              <h2 class="statu btn btn-soft btn-outline text-xl">
+                NO Applicable
+              </h2>
+              <p class="notes">New leaf unfurling by the east window</p>
+              <div class="flex gap-5">
+                <button class="thriving-btn btn btn-outline btn-secondary">
+                  Thriving
+                </button>
+                <button class="struggling-btn btn btn-outline btn-success">
+                  Struggling
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- main par 2 -->
+          <div>
+            <button class="delet-btn btn btn-soft btn-secondary btn-lg">
+              Deleat
+            </button>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div
+          class="flex flex-col md:flex-row gap-10 justify-between p-8 border rounded-md mb-8 bg-base-300"
+        >
+          <!-- main par 1 -->
+          <div class="card">
+            <div class="space-y-5">
+              <div>
+                <h2 class="plantName text-4xl font-semibold">Plant name 3</h2>
                 <h2 class="latinName text-xl font-medium">Latin name</h2>
               </div>
               <div class="flex gap-5">

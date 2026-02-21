@@ -32,9 +32,9 @@ function toggleStyle(id) {
   sturgglingFilterBtn.classList.remove("bg-black", "text-white");
 
   // add btn and text
-  allFilterBtn.classList.add("btn", "text-2xl");
-  thrivingFilterBtn.classList.add("btn", "text-2xl");
-  sturgglingFilterBtn.classList.add("btn", "text-2xl");
+  allFilterBtn.classList.add("btn", "text-2xl", "py-4");
+  thrivingFilterBtn.classList.add("btn", "text-2xl", "py-4");
+  sturgglingFilterBtn.classList.add("btn", "text-2xl", "py-4");
 
   const selected = document.getElementById(id);
   CurrentStatu = id;
